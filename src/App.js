@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from "./navbar";
 import Cats from "./cats";
 import Dogs from "./dogs";
+import OtherAnimals from "./other-animals";
 
 function App() {
   const Home = () => <div><h1> Hopeful Tails </h1>
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/cats" element={<Cats />} />
         <Route path="/dogs" element={<Dogs />} />
+        <Route path="/other-animals" element={<OtherAnimals />} />
       </Routes>
     </BrowserRouter>
     </div>

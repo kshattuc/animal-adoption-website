@@ -9,6 +9,7 @@ const Dogs = () => {
           <p>Age: 1 year</p>
           <p>Gender: female</p>
           <p>Breed: schnauzer</p>
+          <p>Color: black</p>
           <p>House-trained: Yes</p>
           <p>Spayed/Neutered: Yes</p>
           <p>Vaccinated: Yes</p>

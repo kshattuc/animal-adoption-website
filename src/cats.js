@@ -7,8 +7,9 @@ const Cats = () => {
         <div className="col-3">
           <p>Available: Yes!</p>
           <p>Age: 1.5 years</p>
-          <p>Gender: female</p>
-          <p>Breed: siamese</p>
+          <p>Gender: Female</p>
+          <p>Breed: Siamese</p>
+          <p>Color: Cream/Dark Brown</p>
           <p>House-trained: Yes</p>
           <p>Spayed/Neutered: Yes</p>
           <p>Vaccinated: Yes</p>
@@ -27,8 +28,9 @@ const Cats = () => {
         <div className="col-3">
           <p>Available: Yes!</p>
           <p>Age: 3 years</p>
-          <p>Gender: male</p>
-          <p>Breed: british shorthair</p>
+          <p>Gender: Male</p>
+          <p>Breed: British Shorthair</p>
+          <p>Color: Grey/Tan/White</p>
           <p>House-trained: Yes</p>
           <p>Spayed/Neutered: Yes</p>
           <p>Vaccinated: Yes</p>
