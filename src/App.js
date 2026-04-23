@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
+import Navbar from "./navbar";
+import Cats from "./cats";
+import Dogs from "./dogs";
 
 function App() {
+  const Home = () => <div><h1> Hopeful Tails </h1>
+        <p> Welcome everyone to Hopeful Tails, the purr-fect place to find 
+            the newest addition to your family! </p>
+        <img src="images/home.webp" alt="dogs"/> </div>;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cats" element={<Cats />} />
+        <Route path="/dogs" element={<Dogs />} />
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
