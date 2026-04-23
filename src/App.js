@@ -10,6 +10,7 @@ function App() {
         <p> Welcome everyone to Hopeful Tails, the purr-fect place to find 
             the newest addition to your family! </p>
         <img src="images/home.webp" alt="dogs"/> </div>;
+        <p>Testing testing -Emerson</p>
   return (
     <div>
     <BrowserRouter>
