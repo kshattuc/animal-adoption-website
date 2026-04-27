@@ -11,7 +11,7 @@ const Cats = [
     gender: "Female",
     house_trained:"Yes",
     vaccinated:"Yes",
-    House_trained:"Yes",
+    sprayed_neutered:"Yes",
     description:"Claire is a very playful kitty who loves attention.",
     image: "/images/claire.jpg"
   },
@@ -25,7 +25,7 @@ const Cats = [
     gender: "Male",
     house_trained:"Yes",
     vaccinated:"Yes",
-    House_trained:"Yes",
+    sprayed_neutered:"Yes",
     description:"Whiskers is very mischevious and loves to play and hide toys around the house.",
     image: "/images/whiskers.jpg"
   },
@@ -39,7 +39,7 @@ const Cats = [
     gender: "Female",
     house_trained:"Yes",
     vaccinated:"Yes",
-    House_trained:"Yes",
+    sprayed_neutered:"Yes",
     description:"Midnight enjoys nature and walking outside. She is very intelligent and picks up new skills quickly.",
     image: "/images/midnight.png"
   },
@@ -53,7 +53,7 @@ const Cats = [
     gender: "Male",
     house_trained:"Yes",
     vaccinated:"Yes",
-    House_trained:"Yes",
+    sprayed_neutered:"Yes",
     description:"Fibonacci loves to learn new skills. He also loves to curl up by the fire.",
     image: "/images/fibonacci.png"
   },
@@ -86,6 +86,7 @@ const [pets, setPets] = useState(Cats);
           <p>Color: {pet.color}</p>
           <p>Gender: {pet.gender}</p>
           <p>House-trained: {pet.house_trained}</p>
+          <p>Sprayed/Neutered: {pet.sprayed_neutered}</p>
           <p>Vaccinated: {pet.vaccinated}</p>
           <p>{pet.description}</p>
 
