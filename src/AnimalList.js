@@ -32,9 +32,15 @@ export default function AnimalList({ pets, setAnimals }) {
           <p>Breed: {pet.breed}</p>
           <p>Color: {pet.color}</p>
           <p>Gender: {pet.gender}</p>
-          <p>House-trained: {pet.house_trained || "N/A"}</p>
-          <p>Sprayed/Neutered: {pet.sprayed_neutered}</p>
-          <p>Vaccinated: {pet.vaccinated}</p>
+          <p> House-trained:{" "}
+          {pet.house_trained == null
+          ? "N/A"
+          : pet.house_trained
+          ? "Yes!"
+          : "No"}
+          </p>
+          <p>Sprayed/Neutered: {pet.sprayed_neutered ? "Yes!" : "No"}</p>
+          <p>Vaccinated: {pet.vaccinated ? "Yes!" : "No"}</p>
           <p>{pet.description}</p>
 
           <button
