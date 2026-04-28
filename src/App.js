@@ -1,28 +1,49 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css';
+import { useEffect, useState } from "react";
+import { supabase } from "./config/supabaseClient";
+
 import Navbar from "./navbar";
-import Cats from "./cats";
-import Dogs from "./dogs";
-import OtherAnimals from "./other-animals";
+import Home from "./pages/Home";
+import Cats from "./pages/Cats";
+import Dogs from "./pages/Dogs";
+import OtherAnimals from "./pages/OtherAnimals";
 
 function App() {
-  const Home = () => <div><h1> Hopeful Tails </h1>
-        <p> Welcome everyone to Hopeful Tails, the purr-fect place to find 
-            the newest addition to your family! </p>
-        <img src="images/home.webp" alt="dogs"/> </div>;
-        <p>Testing testing -Emerson</p>
+  const [animals, setAnimals] = useState([]);
+  const [fetchError, setFetchError] = useState(null);
+
+  useEffect(() => {
+    const fetchAnimals = async () => {
+      const { data, error } = await supabase.from("animal").select("*");
+
+      if (error) {
+        setFetchError("Could not fetch animal data");
+        setAnimals([]);
+        console.log(error);
+      }
+
+      if (data) {
+        setAnimals(data);
+        setFetchError(null);
+      }
+    };
+
+    fetchAnimals();
+  }, []);
+
   return (
-    <div>
     <BrowserRouter>
       <Navbar />
+
+      {fetchError && <p>{fetchError}</p>}
+
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cats" element={<Cats />} />
-        <Route path="/dogs" element={<Dogs />} />
-        <Route path="/other-animals" element={<OtherAnimals />} />
+        <Route path="/cats" element={<Cats animals={animals} setAnimals={setAnimals} />} />
+        <Route path="/dogs" element={<Dogs animals={animals} setAnimals={setAnimals} />} />
+        <Route path="/other-animals" element={<OtherAnimals animals={animals} setAnimals={setAnimals} />} />
       </Routes>
     </BrowserRouter>
-    </div>
   );
 }
 
