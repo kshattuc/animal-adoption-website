@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "Dogs", path: "/dogs" },
