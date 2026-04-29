@@ -43,6 +43,7 @@ Each animal includes:
 ---
 
 ## Project Structure
+```
 animal-adoption-website/
 ├── public/
 ├── src/
@@ -55,13 +56,15 @@ animal-adoption-website/
 │ └── styles.css
 ├── package.json
 └── tailwind.config.js
-
+```
 ## Installation
 
 ### 1. Clone repo
+```
 bash
 git clone <your-repo-url>
 cd animal-adoption-website
+```
 
 ### 2. Install dependencies
 npm install
