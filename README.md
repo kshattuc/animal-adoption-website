@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Hopeful Tails - Animal Adoption Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
 
-## Available Scripts
+### Pages
+- Home  
+- Cats  
+- Dogs  
+- Other Animals  
 
-In the project directory, you can run:
+### Animal Profiles
+Each animal includes:
+- Name  
+- Image  
+- Breed  
+- Color  
+- Vaccination status  
+- Description  
 
-### `npm start`
+### Functionality
+- “Adopt Now” button → updates to **Adopted**
+- Availability status changes dynamically  
+- Reusable components across pages  
+- Data fetched from Supabase  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+### Frontend
+- React (JavaScript)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Styling
+- Tailwind CSS  
+- DaisyUI  
 
-### `npm run build`
+### Backend
+- Supabase  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Routing
+- React Router  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
+animal-adoption-website/
+├── public/
+├── src/
+│ ├── config/
+│ ├── pages/
+│ ├── AnimalList.js
+│ ├── App.js
+│ ├── navbar.js
+│ ├── Footer.js
+│ └── styles.css
+├── package.json
+└── tailwind.config.js
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. Clone repo
+bash
+git clone <your-repo-url>
+cd animal-adoption-website
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Install dependencies
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Environment Variables
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Create a `.env` file in the root directory by copying the `.env.example` example file:
+Then fill in your values:
+REACT_APP_SUPABASE_URL=your_supabase_url
+REACT_APP_SUPABASE_ANON_KEY=your_supabase_anon_key
 
-## Learn More
+### 3. Run project
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Katie
+- Built the initial front-end structure using React and JavaScript  
+- Created pages: Home, Cats, Dogs, and Other Animals  
+- Designed static animal profile layouts (name, image, breed, color, vaccination status, description)  
+- Implemented the “Adopt Now” button with front-end state updates  
 
-### Code Splitting
+---
+### Huyen
+- Configured routing using React Router and managed shared state across pages  
+- Developed and refactored a reusable `AnimalList` component for consistent rendering  
+- Designed and set up the Supabase database and animal table  
+- Implemented data fetching from Supabase to display dynamic animal data  
+- Handled adoption functionality by updating animal status in the database  
+- Ensured adoption status persists by syncing UI changes with Supabase  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+### Emerson
+- Designed the overall UI, including layout, color scheme, and responsiveness using Tailwind CSS and DaisyUI  
+- Built reusable components (navbar, footer, animal cards, buttons, collapsible sections)  
+- Refined UI to display dynamic data cleanly  
+- Troubleshot layout issues, especially responsiveness and image handling  
